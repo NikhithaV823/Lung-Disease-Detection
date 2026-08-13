@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Results - Lung Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Prediction Complete!</h1>
+        <p>File analyzed: <strong>{{ filename }}</strong></p>
+
+        <div class="result-box">
+            <h2>Predicted Disease:</h2>
+            <p class="disease-label">
+                <strong>{{ disease }}</strong>
+            </p>
+            <p class="confidence-label">
+                (Confidence: {{ confidence }}%)
+            </p>
+        </div>
+
+        <a href="{{ url_for('upload') }}" class="back-btn">Analyze Another File</a>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Audio - Lung Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<header>
+    <h1>Respiratory Disease Prediction</h1>
+</header>
+
+<body>
+    <div class="container">
+        <h2>Welcome, {{ session.get('username', 'User') }}!</h2>
+        <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+
+        <h1>Upload Lung Sound for Prediction</h1>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="audiofile">Select Audio File (.wav only):</label>
+            <input type="file" id="audiofile" name="audiofile" accept=".wav" required>
+            <button type="submit">Predict Disease</button>
+        </form>
+        <p class="note">**Note:** File must be in the WAV format and should reflect the audio parameters used during
+            model training.</p>
+    </div>
+</body>
+
+</html>
