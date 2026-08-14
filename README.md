@@ -111,4 +111,56 @@ The application allows a user to upload a respiratory audio recording. The train
 - Flask
 - Jupyter Notebook
 
+## Project Structure
+
+Lung-Disease-Detection/
+├── CNN & ANN/
+│   └── best_model_ann.h5
+├── templates/
+│   ├── login.html
+│   ├── upload.html
+│   └── results.html
+├── static/
+│   ├── images/
+│   └── style.css
+├── .gitignore
+├── *.ipynb
+├── README.md
+├── app.py
+└── requirements.txt
+
+
+## Setup
+
+1. Install Python.
+2. Download or clone this repository.
+3. Open the project folder in Command Prompt.
+4. Install the required packages:
+
+   pip install -r requirements.txt
+   Note: The requirements.txt file includes packages used for both model development/training and the Flask application. If you only want to run the Flask application, only the packages required by app.py are necessary.
+
+6. Create a file named `.env` in the same folder as `app.py`.
+
+7. Add the following to `.env`:
+
+   SECRETKEY='your-own-secret-key'
+
+8. Run the application:
+
+   python app.py
+
+9. Open the local address shown by Flask in your browser.
+
+## Login
+Username: user
+Password: lungapp
+## Upload
+Upload a .wav respiratory audio file.
+## Predict
+The predicted diagnosis will be displayed.
+
+
 ***** This project is developed for academic and research purposes.*******
+
+
