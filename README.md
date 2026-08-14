@@ -113,6 +113,7 @@ The application allows a user to upload a respiratory audio recording. The train
 
 ## Project Structure
 
+```text
 Lung-Disease-Detection/
 ├── CNN & ANN/
 │   └── best_model_ann.h5
@@ -128,7 +129,7 @@ Lung-Disease-Detection/
 ├── README.md
 ├── app.py
 └── requirements.txt
-
+```
 
 ## Setup
 
