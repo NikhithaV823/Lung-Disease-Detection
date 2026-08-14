@@ -22,3 +22,7 @@ jupyter
 tabulate    # Used for text-based tables
 tqdm        # Used for progress bars
 # ...
+os
+python -dotenv
+
+# these are enough to only run the application (Flask, Werkzeug, tensorflow, librosa, numpy, python-dotenv)
